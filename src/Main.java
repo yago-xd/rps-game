@@ -1,6 +1,18 @@
 import java.util.Random;
 import java.util.Scanner;
 public class Main {
+    private static int win_streak;
+    private static int loss_streak;
+    private static int draw_streak;
+    public static void streak(){
+        if(win_streak>1)
+            System.out.println("\nYou are on a win-streak of "+win_streak+" wins!");
+        else if(loss_streak>1)
+            System.out.println("\nYou are on a loss-streak of "+loss_streak+" losses!");
+        else if(draw_streak >1){
+            System.out.println("\nYou are on a draw-streak of "+ draw_streak +" drawn games");
+        }
+    }
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
@@ -35,22 +47,29 @@ public class Main {
             else if (user.equals("rock") || user.equals("paper") || user.equals("scissors")) {
                 System.out.println(comments[rand.nextInt(comments.length)]);
                 comp=choices[rand.nextInt(3)];
-                Thread.sleep(3000);
+                Thread.sleep(2500);
                 g++;
                 System.out.println("You chose: "+user);
                 System.out.println("Computer chose: "+comp);
                 if((user.equals("rock") && comp.equals("scissors")) || (user.equals("paper") && comp.equals("rock")) || (user.equals("scissors") && comp.equals("paper"))){
                     System.out.println("You Win!");
                     uwin++;
+                    win_streak++;
+                    loss_streak= draw_streak =0;
                 }
                 else if(user.equals(comp)){
                     System.out.println("It's a Tie!");
                     draw++;
+                    draw_streak++;
+                    loss_streak=win_streak=0;
                 }
                 else{
                     System.out.println("You Lost!");
                     cwin++;
+                    loss_streak++;
+                    win_streak= draw_streak =0;
                 }
+                streak();
                 w=((double) uwin /g)*100.0;
                 l=((double) (g - uwin - draw) /g)*100.;
                 d=((double) draw /g)*100.0;

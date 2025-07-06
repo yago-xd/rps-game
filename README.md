@@ -13,6 +13,7 @@ A simple Rock Paper Scissors (RPS) game built using Java. Play against the compu
 - Randomized computer move logic
 - Input validation and helpful user prompts
 - Custom messages between choosing to keep the user engaged
+- Streak tracker of wins,losses,draws
 - Running score tracking:
     - 🕹️ Games Played
     - ✅ Wins
