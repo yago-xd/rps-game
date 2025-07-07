@@ -35,8 +35,11 @@ public class Main {
         int cwin=0,uwin=0,draw=0,g=0;
         double w,l,d;
         char play='Y';
+        int round=1;
         while(play=='Y'||play=='y'){
             System.out.println("------------------------------");
+            System.out.println("Round: "+round);
+            round++;
             System.out.print("\nEnter your choice (rock, paper, scissors): ");
             user = sc.next().toLowerCase();
             if(user.equals("exit")){
@@ -70,9 +73,9 @@ public class Main {
                     win_streak= draw_streak =0;
                 }
                 streak();
-                w=((double) uwin /g)*100.0;
-                l=((double) (g - uwin - draw) /g)*100.;
-                d=((double) draw /g)*100.0;
+                w=((double) uwin /g)*100.000;
+                l=((double) (g - uwin - draw) /g)*100.000;
+                d=((double) draw /g)*100.000;
                 System.out.println("\nScore: User - "+uwin+" | Computer - "+cwin);
                 System.out.println("Games Played: "+g);
                 System.out.println("Win %: "+w+"%");
