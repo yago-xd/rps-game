@@ -73,9 +73,9 @@ public class Main {
                     win_streak= draw_streak =0;
                 }
                 streak();
-                w=((double) uwin /g)*100.000;
-                l=((double) (g - uwin - draw) /g)*100.000;
-                d=((double) draw /g)*100.000;
+                w=((double) uwin /g)*100.0;
+                l=((double) (g - uwin - draw) /g)*100.0;
+                d=((double) draw /g)*100.0;
                 System.out.println("\nScore: User - "+uwin+" | Computer - "+cwin);
                 System.out.println("Games Played: "+g);
                 System.out.println("Win %: "+w+"%");
