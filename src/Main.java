@@ -31,31 +31,6 @@ public class Main {
                 "It’s like we’re reading each other’s minds!",
                 "Classic choice. Bold and timeless."
         };
-        String[] win = {
-                "Victory is yours! 🏆",
-                "You crushed it! 💥",
-                "Flawless win! 😎",
-                "Outsmarted the computer! 🧠",
-                "You're on fire! 🔥",
-                "That was a clean win! ✨",
-                "Impressive move! 🎯",
-                "You’ve got the magic touch! 🪄",
-                "Well played, champion! 👑",
-                "Another W for the legend! 🐐"
-        };
-        String[] loss = {
-                "Oof... the computer outplayed you. 🤖",
-                "Tough luck! Try again? 💔",
-                "Defeat... but you'll bounce back! 📉",
-                "That one slipped away! 🫤",
-                "You're giving the computer hope! 😅",
-                "Next time, you got this! 🔄",
-                "Too bad, so sad! 😢",
-                "The computer is flexing! 💪🤖",
-                "That strategy didn’t work... 😬",
-                "Even legends fall sometimes! 🥀"
-        };
-
         String user,comp;
         int cwin=0,uwin=0,draw=0,g=0;
         double w,l,d;
@@ -78,10 +53,9 @@ public class Main {
                 Thread.sleep(2500);
                 g++;
                 System.out.println("You chose: "+user);
-                System.out.println("Computer chose: "+comp+"\n");
+                System.out.println("Computer chose: "+comp);
                 if((user.equals("rock") && comp.equals("scissors")) || (user.equals("paper") && comp.equals("rock")) || (user.equals("scissors") && comp.equals("paper"))){
-                    System.out.println("\u001B[32mYou Win!\u001B[0m");
-                    System.out.println(win[rand.nextInt(win.length)]);
+                    System.out.println("You Win!");
                     uwin++;
                     win_streak++;
                     loss_streak= draw_streak =0;
@@ -93,8 +67,7 @@ public class Main {
                     loss_streak=win_streak=0;
                 }
                 else{
-                    System.out.println("\u001B[31mYou Lost!\u001B[0m");
-                    System.out.println(loss[rand.nextInt(loss.length)]);
+                    System.out.println("You Lost!");
                     cwin++;
                     loss_streak++;
                     win_streak= draw_streak =0;

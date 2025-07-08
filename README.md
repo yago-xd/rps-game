@@ -12,14 +12,13 @@ A simple Rock Paper Scissors (RPS) game built using Java. Play against the compu
 - Classic Rock 🪨, Paper 📄, Scissors ✂️ gameplay
 - Randomized computer move logic
 - Input validation and helpful user prompts
-- Color coded win and loss messages to help the user identify
-- Custom messages for wins and losses and in between choosing times
-- Streak tracker of wins, losses, draws
+- Custom messages between choosing to keep the user engaged
+- Streak tracker of wins,losses,draws
 - Running score tracking:
-    - 🕹️ Games Played
-    - ✅ Wins
-    - ❌ Losses
-    - 🤝 Draws
+  - 🕹️ Games Played
+  - ✅ Wins
+  - ❌ Losses
+  - 🤝 Draws
 - Replay support — play as many times as you'd like!
 
 ---
@@ -63,21 +62,18 @@ java -jar rps-game.jar
 Welcome to the Rock Paper Scissors Game!
 Type exit anytime to end the game
 ------------------------------
-Round: 1
 
-Enter your choice (rock, paper, scissors): paper
-I wonder if you’re trying to trick me.
-You chose: paper
+Enter your choice (rock, paper, scissors): rock
+Hmm... interesting move.
+You chose: rock
 Computer chose: rock
+It's a Tie!
 
-You Win!
-Flawless win! 😎
-
-Score: User - 1 | Computer - 0
+Score: User - 0 | Computer - 0
 Games Played: 1
-Win %: 100.0%
+Win %: 0.0%
 Loss %: 0.0%
-Draw %: 0.0%
+Draw %: 100.0%
 
 ------------------------------
 Do you wish to play again? (Y/N): n
