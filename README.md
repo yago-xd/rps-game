@@ -37,6 +37,8 @@ Download the jar file from the releases section
 ```bash
 java -jar rps-game.jar
 ```
+Try it on [Replit](https://replit.com/@yago-xd/rps-game)
+
 ---
 
 ## 🎲 How to Play
