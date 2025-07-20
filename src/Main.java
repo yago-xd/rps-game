@@ -72,7 +72,7 @@ public class Main {
         Thread.sleep(2500);
         return choices[rand.nextInt(3)];
     }
-    static void updateStreaks(String result) {
+    public static void update_streak(String result) {
         switch (result) {
             case "win" -> { win_streak++; loss_streak = draw_streak = 0; }
             case "loss" -> { loss_streak++; win_streak = draw_streak = 0; }
@@ -86,7 +86,7 @@ public class Main {
         if(user.equals(comp)){
             System.out.println("It's a Tie!");
             draw++;
-            updateStreaks("draw");
+            update_streak("draw");
         }
         else if((user.equals("rock") && comp.equals("scissors")) ||
                 (user.equals("paper") && comp.equals("rock")) ||
@@ -94,13 +94,13 @@ public class Main {
             System.out.println("\u001B[32mYou Win!\u001B[0m");
             System.out.println(winMsg[rand.nextInt(winMsg.length)]);
             uwin++;
-            updateStreaks("win");
+            update_streak("win");
         }
         else{
             System.out.println("\u001B[31mYou Lost!\u001B[0m");
             System.out.println(lossMsg[rand.nextInt(lossMsg.length)]);
             cwin++;
-            updateStreaks("loss");
+            update_streak("loss");
         }
         streak();
     }
@@ -116,13 +116,13 @@ public class Main {
     }
     public static char replay() {
         System.out.print("\nDo you wish to play again? (Y/N): ");
-        return sc.next().trim().charAt(0);
+        return sc.next().trim().toUpperCase().charAt(0);
     }
     public static void main(String[] args) throws InterruptedException {
         welcome();
         char play = 'Y';
         int round = 1;
-        while (play == 'Y' || play == 'y') {
+        while (play == 'Y') {
             System.out.println("\n------------------------------");
             System.out.println("Round: " + round++);
             String user = getUser();
