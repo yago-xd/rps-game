@@ -29,7 +29,7 @@ public class Main {
             "Impressive move! 🎯",
             "You’ve got the magic touch! 🪄",
             "Well played, champion! 👑",
-            "Another W for the legend! 🐐"
+            "Another Win for the legend! 🐐"
     };
     private static final String[] lossMsg = {
             "Oof... the computer outplayed you. 🤖",
